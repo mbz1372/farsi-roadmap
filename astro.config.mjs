@@ -1,6 +1,7 @@
 // https://astro.build/config
 import sitemap from '@astrojs/sitemap';
-import node from '@astrojs/node';
+//import node from '@astrojs/node';
+import vercel from '@astrojs/vercel/server';
 import { defineConfig } from 'astro/config';
 import rehypeExternalLinks from 'rehype-external-links';
 import { serializeSitemap, shouldIndexPage } from './sitemap.mjs';
@@ -56,8 +57,9 @@ export default defineConfig({
     ],
   },
   output: 'server',
-  adapter: node({
-    mode: 'standalone',
+  adapter: vercel({
+    // اگر خواستی لبه‌ای (Edge) باشه: entrypoint: 'edge'
+    // entrypoint: 'node',  // حالت پیش‌فرض و امن,
   }),
   trailingSlash: 'never',
   integrations: [
