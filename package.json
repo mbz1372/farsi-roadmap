@@ -33,7 +33,6 @@
   },
   "dependencies": {
     "@ai-sdk/react": "2.0.0-beta.34",
-    "@astrojs/node": "^9.2.1",
     "@astrojs/react": "^4.2.7",
     "@astrojs/sitemap": "^3.4.0",
     "@fingerprintjs/fingerprintjs": "^4.6.2",
@@ -121,6 +120,7 @@
     "@types/react-slick": "^0.23.13",
     "@types/sanitize-html": "^2.16.0",
     "@types/turndown": "^5.0.5",
+    "@astrojs/vercel": "^7.8.0",
     "ai": "5.0.0-beta.34",
     "csv-parser": "^3.2.0",
     "gh-pages": "^6.3.0",
