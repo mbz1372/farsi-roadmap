@@ -109,6 +109,7 @@
   },
   "devDependencies": {
     "@ai-sdk/google": "^1.2.18",
+    "@astrojs/vercel": "^7.8.0",
     "@playwright/test": "^1.52.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/dom-to-image": "^2.6.7",
@@ -120,7 +121,6 @@
     "@types/react-slick": "^0.23.13",
     "@types/sanitize-html": "^2.16.0",
     "@types/turndown": "^5.0.5",
-    "@astrojs/vercel": "^7.8.0",
     "ai": "5.0.0-beta.34",
     "csv-parser": "^3.2.0",
     "gh-pages": "^6.3.0",
