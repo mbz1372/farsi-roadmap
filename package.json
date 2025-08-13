@@ -17,8 +17,6 @@
     "roadmap-dirs": "node scripts/roadmap-dirs.cjs",
     "roadmap-assets": "tsx scripts/editor-roadmap-assets.ts",
     "refresh-assets": "tsx scripts/refresh-assets.ts",
-    "editor-roadmap-dirs": "tsx scripts/editor-roadmap-dirs.ts",
-    "editor-roadmap-content": "tsx scripts/editor-roadmap-content.ts",
     "roadmap-content": "node scripts/roadmap-content.cjs",
     "generate-renderer": "sh scripts/generate-renderer.sh",
     "generate-renderer-dummy": "sh scripts/generate-renderer-dummy.sh",
@@ -27,8 +25,6 @@
     "generate:og": "node ./scripts/generate-og-images.mjs",
     "warm:urls": "sh ./scripts/warm-urls.sh https://roadmap.sh/sitemap-0.xml",
     "compress:images": "tsx ./scripts/compress-images.ts",
-    "generate:roadmap-content-json": "tsx ./scripts/editor-roadmap-content-json.ts",
-    "migrate:editor-roadmaps": "tsx ./scripts/migrate-editor-roadmap.ts",
     "test:e2e": "playwright test"
   },
   "dependencies": {
@@ -42,7 +38,6 @@
     "@radix-ui/react-dropdown-menu": "^2.1.15",
     "@radix-ui/react-popover": "^1.1.14",
     "@resvg/resvg-js": "^2.6.2",
-    "@roadmapsh/editor": "workspace:*",
     "@shikijs/transformers": "^3.9.2",
     "@tailwindcss/vite": "^4.1.7",
     "@tanstack/react-query": "^5.76.1",
