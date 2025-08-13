@@ -104,7 +104,7 @@
   },
   "devDependencies": {
     "@ai-sdk/google": "^1.2.18",
-    "@astrojs/vercel": "^7.8.0",
+    "@astrojs/vercel": "^8.2.5",
     "@playwright/test": "^1.52.0",
     "@tailwindcss/typography": "^0.5.16",
     "@types/dom-to-image": "^2.6.7",

@@ -1,5 +1,6 @@
+// https://astro.build/config
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel/server';
+import vercel from '@astrojs/vercel';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
@@ -7,7 +8,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { serializeSitemap, shouldIndexPage } from './sitemap.mjs';
 
 export default defineConfig({
-  site: 'https://farsi-roadmap.vercel.app', // بعداً دامنه‌ات
+  site: 'https://farsi-roadmap.vercel.app', // بعداً دامنه خودت
   redirects: {
     '/devops/devops-engineer': { status: 301, destination: '/devops' },
     '/ai-tutor': { status: 301, destination: '/ai' },
@@ -29,9 +30,12 @@ export default defineConfig({
     }]],
   },
   output: 'server',
-  adapter: vercel({}),
+  adapter: vercel(),
   trailingSlash: 'never',
-  integrations: [sitemap({ filter: shouldIndexPage, serialize: serializeSitemap }), react()],
+  integrations: [
+    sitemap({ filter: shouldIndexPage, serialize: serializeSitemap }),
+    react(),
+  ],
   vite: {
     plugins: [tailwindcss()],
   },
