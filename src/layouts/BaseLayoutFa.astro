@@ -1,0 +1,15 @@
+---
+const { title = 'نقشه‌راه توسعه‌دهندگان (فارسی)', description = 'مسیر یادگیری مرحله‌به‌مرحله به فارسی' } = Astro.props;
+---
+<html lang="fa" dir="rtl" class="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Language" content="fa" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="font-sans antialiased">
+    <slot />
+  </body>
+</html>

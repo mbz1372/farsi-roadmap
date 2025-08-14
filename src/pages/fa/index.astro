@@ -1,0 +1,20 @@
+---
+import BaseLayoutFa from '../../layouts/BaseLayoutFa.astro';
+export const prerender = true;
+const title = 'نقشه‌راه توسعه‌دهندگان (فارسی)';
+const description = 'مسیر یادگیری مرحله‌به‌مرحله به زبان فارسی';
+---
+<BaseLayoutFa {title} {description}>
+  <main class="container mx-auto px-4 py-10">
+    <section class="space-y-4">
+      <h1 class="text-3xl font-extrabold">سلام! نسخهٔ فارسی فعال شد 🎉</h1>
+      <p class="text-lg opacity-80">
+        از اینجا شروع کن. به‌مرور صفحه‌ها و محتواها را فارسی می‌کنیم.
+      </p>
+      <nav class="flex gap-3 flex-wrap">
+        <a href="/fa/roadmaps" class="px-4 py-2 rounded-md bg-black text-white">نقشه‌راه‌ها</a>
+        <a href="/" class="px-4 py-2 rounded-md border">نسخهٔ انگلیسی</a>
+      </nav>
+    </section>
+  </main>
+</BaseLayoutFa>

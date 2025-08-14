@@ -5,10 +5,9 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import rehypeExternalLinks from 'rehype-external-links';
 import tailwindcss from '@tailwindcss/vite';
-import { serializeSitemap, shouldIndexPage } from './sitemap.mjs';
 
 export default defineConfig({
-  site: 'https://farsi-roadmap.vercel.app', // بعداً دامنه خودت
+  site: 'https://farsi-roadmap.vercel.app', // TODO: replace with your domain
   redirects: {
     '/devops/devops-engineer': { status: 301, destination: '/devops' },
     '/ai-tutor': { status: 301, destination: '/ai' },
@@ -24,7 +23,7 @@ export default defineConfig({
           'https://thenewstack.io',
           'https://kamranahmed.info',
           'https://roadmap.sh'];
-        if (allow.some((p) => href.startsWith(p))) return [];
+        if (allow.some((p) => href?.startsWith?.(p))) return [];
         return 'noopener noreferrer nofollow';
       },
     }]],
@@ -33,10 +32,15 @@ export default defineConfig({
   adapter: vercel(),
   trailingSlash: 'never',
   integrations: [
-    sitemap({ filter: shouldIndexPage, serialize: serializeSitemap }),
+    sitemap(),
     react(),
   ],
   vite: {
     plugins: [tailwindcss()],
+    resolve: {
+      alias: {
+        '@roadmapsh/editor': '/src/shims/roadmapsh-editor.ts',
+      },
+    },
   },
 });

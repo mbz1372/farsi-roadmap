@@ -1,0 +1,9 @@
+---
+const { pathname } = Astro.url;
+const isFa = pathname.startsWith('/fa');
+const target = isFa ? (pathname.replace(/^\/fa/, '') || '/') : `/fa${pathname}`;
+---
+<a href={target} aria-label="Switch language" class="inline-flex items-center gap-2 opacity-80 hover:opacity-100">
+  <span>🌐</span>
+  <span class="text-sm">{isFa ? 'English' : 'فارسی'}</span>
+</a>
